@@ -12,6 +12,136 @@
 <body>
     <!-- Le contenu de la page sera ajoute ici -->
     <!-- Bootstrap 5 via CDN : script JavaScript -->
+    <nav class="navbar navbar-expand navbar-light bg-white border-bottom shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo-AfriTalent" height="50" width="150" class="d-inline-block align-text-top" ></a>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active text-dark fw-semibold" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="freelances.html">Freelances</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="tarifs.html">Tarifs</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="about.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <a class="btn btn-primary text-light btn-center" href="contact.html" role="button">Rejoindre AfriTalent</a>
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navMenu"
+                aria-controls="navMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <!--Contenu principale-->
+    <main>
+        <!--Section Hero : accroche principale-->
+        <section id="hero">
+            <div class="container py-5">
+                <h1>Trouvez le talent africain qu'il vous faut</h1>
+                <p>AfriTalent connecte les freelances africains aux clients du monde entier.</p>
+                <a href="freelances.html" class="btn btn-primary" role="button">Je suis freelance</a>
+                <a href="about.html" class="btn btn-outline-primary" role="button">Je cherche un freelance</a>
+            </div>
+        </section>
+        <!--Section Services-->
+        <section id="Services--">
+            <div container py-5>
+                <h2>Nos domaines d'expertise</h2>
+                <div class="row">
+                    <div class="card-body col-md-4">
+                        <img src="images/web.png" alt="icone-web" height="50" width="50">
+                        <h3>Developpement Web</h3>
+                        <p>Sites vitrine, applications web, e-commerce.</p>
+                    </div>
+                    <div class="card-body col-md-4">
+                        <img src="images/design.png" alt="icone-design" height="50" width="50">
+                        <h3>Design Graphique</h3>
+                        <p>Identité visuelle, UI/UX, illustrations.</p>
+                    </div>
+                    <div class="card-body col-md-4">
+                        <img src="images/marketing.webp" alt="icone-marketing" height="50" width="50">
+                        <h3>Marketing Digital</h3>
+                        <p>Reseaux sociaux, SEO, campagnes publicitaires.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Section Statistiques-->
+        <section id="statistiques">
+            <div class="container py-5">
+                <h2>AfriTalent en chiffres</h2>
+                <div class="row text-center">
+                    <div class="col-md-4"><p>1 800+ freelances</p></div>
+                    <div class="col-md-4"><p>60 Pays représentes</p></div>
+                    <div class="col-md-4"><p>4 500+ Projets réalisès</p></div>
+                </div>
+            </div>
+        </section>
+        <!--Section Témoignages-->
+        <section id="temoignages">
+            <div class="container py-5">
+                <h2>Ce que disent nos Clients</h2>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <blockquote class="blockquote">
+                            <p>AfriTalent m'a permis de trouver <br> un developpeurs compétent en moins de 48h.</p>
+                            <footer class="blockquote-footer"><img src="images/avatar-fatoumata.jpg" alt="avatar-fatoumata" width="100" height="80"></a> Fatoumata Sow, Directrice Marketing</footer>
+                            <i class="bi bi-star-fill"></i>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-4">
+                        <blockquote class="blockquote">
+                            <p>AfriTalent m'a aidé à créer des templates personnalisé. je mets 10 minutes à faire mes postes maintenant,contre 1 heure avant.</p>
+                            <footer class="blockquote-footer"><img src="images/avatar-tidiane.avif" alt="avatar-tidiane" width="100" height="80"> Tidiane Gadiaga, Influenceur</footer>
+                            <i class="bi bi-star-fill"></i>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-4">
+                        <blockquote class="blockquote">
+                            <p> Mon entreprise de mannequinat s'est reconnu <br> mondialement via ses créations de contenus exeptionnelle .</p>
+                            <footer class="blockquote-footer"><img src="images/avatar-soukey.jpg" alt="avatar-soukey" width="100" height="80"> Soukeyna Ndiaye, Directrice de IMG models</footer>
+                            <i class="bi bi-star-fill"></i>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--Pied de page-->
+    <footer classe="bg-light text-dark py-5 border-top site-footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0 text-md-center">
+                    <h5 class="fw-bold">AfriTalent</h5>
+                    <p class="text-muted small">
+                        Créateurs de solutions numériques depuis 2021. <br> Nous allions design épuré et performance.</p><br>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0 text-md-center">
+                    <h3>Suivez-nous</h3>
+                    <div class="soial-link">
+                        <a href="#"><i class="fab fa-github"></i>Github</a>
+                        <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                        <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0 text-md-center footer-column">
+                    <h5 class="fw-bold">Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">À propos</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Nos Services</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Contact</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Freelances</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="text-muted small mb-0">&copy; 2026 AfriTalent - Tous droits réservès.</p>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Votre script JavaScript -->
     <script src="js/main.js"></script>
