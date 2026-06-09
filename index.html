@@ -6,6 +6,7 @@
     <title>AfriTalent — Accueil</title>
     <!-- Bootstrap 5 via CDN : feuille de style -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- Votre feuille de style personnelle -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -40,14 +41,21 @@
         <!--Section Hero : accroche principale-->
         <section id="hero">
             <div class="container py-5">
-                <h1>Trouvez le talent africain qu'il vous faut</h1>
-                <p>AfriTalent connecte les freelances africains aux clients du monde entier.</p>
-                <a href="freelances.html" class="btn btn-primary" role="button">Je suis freelance</a>
-                <a href="about.html" class="btn btn-outline-primary" role="button">Je cherche un freelance</a>
+                <div class="row align-text-items-center">
+                    <div classe="col-lg-7 hero-text">
+                        <h1>Trouvez le talent africain qu'il vous faut</h1>
+                        <p>AfriTalent connecte les freelances africains aux clients du monde entier.</p>
+                        <a href="freelances.html" class="btn btn-primary" role="button">Je suis freelance</a>
+                        <a href="about.html" class="btn btn-outline-primary" role="button">Je cherche un freelance</a>
+                    </div>
+                    <div classe="col-lg-5 hero-image-container">
+                        <div class="hero-banner-image"></div>
+                    </div>
+                </div>
             </div>
         </section>
         <!--Section Services-->
-        <section id="Services--">
+        <section id="Services">
             <div container py-5>
                 <h2>Nos domaines d'expertise</h2>
                 <div class="row">
@@ -111,7 +119,7 @@
         </section>
     </main>
     <!--Pied de page-->
-    <footer classe="bg-light text-dark py-5 border-top site-footer">
+    <footer class="bg-light text-dark py-5 border-top site-footer">
         <div class="footer-container">
             <div class="row">
                 <div class="col-md-4 mb-4 mb-md-0 text-md-center">
