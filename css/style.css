@@ -132,17 +132,24 @@ a{
 /* 1. Page Accueil*/
 /* Section HERO*/
 #hero{
-    min-height: 80vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     background-color: #f8fafc !important;
     padding: var(--space-lg) 0;
 }
 #hero h1{
-    font-size: 3.5rem;
-    line-height: 1.2;
+    font-size: 3.8rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02rem;
     margin-bottom: var(--space-sm);
     color: var(--text-main);
+}
+#hero h1 span.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color), #4f46e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 #hero p{
     font-size: 1.25rem;
@@ -150,28 +157,93 @@ a{
     margin-bottom: var(--space-md);
     max-width: 600px;
 }
+/* Effet 3D incliné sur l'image*/
+.hero-image-wrapper {
+    position: relative;
+    padding: 1rem;
+}
 #hero .btn{
     margin-right: var(--space-sm);
     margin-bottom: var(--space-sm);
     gap: var(--space-sm);
     flex-wrap: wrap;
 }
-.hero-image-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .hero-banner-image{
     display: block;
     width: 100%;
     height: 450px;
-    background-image: linear-gradient(rgba(250, 204, 21, 0.4), rgba(250, 204, 21, 0.4)), url(../images/plan.png);
-    background-position: center;
+    background-image: linear-gradient(rgba(15, 23, 42, 0.1), rgba(15, 23, 42, 0.2)), url(../images/plan.png);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     border-radius: var(--radius-lg) ;
-    box-shadow: 0 20px 40px rgba(250, 204, 21, 0.15);
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.15);
+    transform: perspective(1000px) rotateY(-7px) rotateX(4px);
     transition: var(--transition-smooth);
+}
+/* L'image se remet droit en douceur quand on passe dessus*/
+.hero-banner-image:hover {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.02);
+}
+/* grille css*/
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* créer 3 colonnes de largeur égale*/
+    grid-auto-rows: 240px; /* fixe la hauteur de base d'une ligne à 240px*/
+    gap: 1.5rem; /*Espace entre les cases*/
+}
+.bento-item {
+    background-color: var(--white);
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+/* placement des grandes cases*/
+.bento-large {
+    grid-column: span 2; 
+    background: linear-gradient(135deg, var(--primary-color) 0%, #4f46e5 1000%);
+    color: var(--white);
+}
+.bento-large h3 {
+    color: var(--white) !important;
+    font-size: 1.8rem;
+}
+.bento-tall {
+    grid-row: span 2;
+    background-color: #f5f3ff;
+    justify-content: space-between;
+}
+.bento-badge {
+    align-self: flex-start;
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--primary-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.bento-large .bento-badge {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+}
+.bento-icon {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    opacity: 0.7;
+    align-self: flex-end;
+}
+.bento-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    border-color: rgba(99, 102, 241, 0.2);
 }
 
 #Services h2, #statistiques h2, #temoignages h2{
@@ -180,17 +252,30 @@ a{
     font-size: 2.25rem;
     position: relative;
 }
-#Services .card-body{
-    background-color: #afb0eb;
-    padding: var(--space-md);
+#Services .conteneur-expertise {
+    background-color: #f8f9fa;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 30px !important;
+    flex-wrap: wrap !important;
+    padding: 20px !important;
+}
+#Services .mon-expert-card{
+    flex: 1 !important;
+    min-width: 280px !important;
+    max-width: 340px !important;
+    background-color: #e3edf7;
+    padding: 25px;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-subtle);
     border: 1px solid rgba(0, 0, 0, 0.01);
     margin-bottom: var(--space-sm);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-#Services .card-body:hover{
+#Services .mon-expert-card:hover{
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.08);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.08) !important;
 }
 #Services img{
     margin-bottom: var(--space-sm);
@@ -215,6 +300,14 @@ a{
     color: white;
 }
 #statistiques .col-md-4 p{
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 20px !important;
+    border: 1px solid white;
+    background-color: var(--white);
+    border-radius: 50px;
+    text-align: center;
     font-family: var(--font-title);
     font-size: 2rem;
     font-weight: 700;
