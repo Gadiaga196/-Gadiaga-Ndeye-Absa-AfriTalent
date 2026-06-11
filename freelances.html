@@ -3,29 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfriTalent — freelances</title>
+    <title>AfriTalent — Accueil</title>
     <!-- Bootstrap 5 via CDN : feuille de style -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- Votre feuille de style personnelle -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Le contenu de la page sera ajoute ici -->
     <!-- Bootstrap 5 via CDN : script JavaScript -->
-      <nav class="navbar navbar-expand navbar-light bg-white border-bottom shadow-sm fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm fixed-top" id="mainNavbar">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo-AfriTalent" height="50" width="150" class="d-inline-block align-text-top" ></a>
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-dark" href="index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link active text-dark fw-semibold" href="freelances.html">Freelances</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="tarifs.html">Tarifs</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="about.html">À propos</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <a class="btn btn-primary text-light btn-center" href="contact.html" role="button">Rejoindre AfriTalent</a>
             <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navMenu"
@@ -34,179 +24,198 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center text-lg-start align-items-center">
+                    <li class="nav-item"><a class="nav-link active text-dark" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="freelances.html">Freelances</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="tarifs.html">Tarifs</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="about.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="text-center text-lg-start ps-lg-3 mt-2 mt-lg-0">
+                    <a class="btn btn-primary text-light w-100 w-lg-auto" href="contact.html" role="button">Rejoindre AfriTalent</a>
+                </div>
+            </div>
         </div>
     </nav>
-    <section class="freelances py-4">
-        <div class="container text-center mb-5">
-            <h1 class="display-4 fw-bold">Nos Freelances</h1>
-            <p class="lead text-muted mx-auto" style="max-width: 800px;">
-                Découvrez les meilleurs talents africains dans différents domaines du numérique.
-                Prets à vous accompagner dans la reussite de vos projets.
-            </p>
-        </div>
-        <div class="container mb-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-4">
-                    <div class="form-floating shadow-sm">
-                        <select class="form-select" id="floatingSelectGrid">
-                            <option selected>Ouvrir le menu contextuel</option>
-                            <option value="1">Développement Web</option>
-                            <option value="2">Designs Graphics</option>
-                            <option value="3">Data Science & IA</option>
-                            <option value="4">Cybersécurity</option>
-                            <option value="5">Réseau & Systéme</option>
-                            <option value="6">Génie Logiciel</option>
-                            <option value="7">Créateurs de contenus</option>
-                            <option value="8">Bases de Données</option>
-                            <option value="9">Marketing Digital</option>
-                        </select>
-                        <label for="floatingSelectGrid">Choisissez une catégorie</label>
+
+    <!--Contenu principale-->
+    <main>
+        <!--Section Hero : accroche principale-->
+        <section id="hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 hero-text">
+                        <h1>Trouvez le <span class="text-gradient">talent africain</span> qu'il vous faut</h1>
+                        <p>AfriTalent connecte les freelances africains aux clients du monde entier.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="freelances.html" class="btn btn-primary" role="button">Je suis freelance</a>
+                            <a href="about.html" class="btn btn-outline-primary" role="button">Je cherche un freelance</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="hero-banner-image"></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <div class="col">
-                    <div class="card h-100 shadow-sm">
-                        <img src="images/web.webp" class="card-img-top" alt="image-dev-web">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Lorse Fall</h5>
-                            <p class="badge bg-info text-dark">Developpeur Web</p>
-                            <p class="card-text text-muted small">Expert en HTMl, CSS, JavaScript... avec 10 ans d'expérience.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="fw-bold">50£/h</span>
-                                <span class="text-warning"><i class="bi bi-star-fill">4.9</i></span>
+        </section>
+        <section id="comment-ca-marche" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Comment fonctionne AfriTalent ?</h2>
+                <div class="bento-grid">
+                    <div class="bento-item bento-large">
+                        <div class="bento-content">
+                            <span class="bento-badge">Etape 1</span>
+                            <h3>Publiez votre besoin en quelques clics</h3>
+                            <p>Découvrez votre projet, vos besoins techniques et votre budget. Notre algorithme cible instantanément les meilleurs tech et design d'Afrique.</p>
+                        </div>
+                    </div>
+                    <div class="bento-item bento-tall">
+                        <div class="bento-content">
+                            <span class="bento-badge">Etape 2</span>
+                            <h3>Sélection & Match</h3>
+                            <p>Recevez des propositions de freelances hautement qualifiés et testés par nos équipes en moins de 48h.</p>
+                            <i class="bi bi-lightning-charge-fill bento-icon"></i>
+                        </div>
+                    </div>
+                     <div class="bento-item">
+                        <div class="bento-content">
+                            <span class="bento-badge">Etape 3</span>
+                            <h3>Collaborez en toute sécurité</h3>
+                            <p>Les fonds sont bloqués sur un compte tiers sécurisé et ne sont versée au freelance que lorsque vous validez le travail.</p>
+                        </div>
+                    </div>
+                     <div class="bento-item">
+                        <div class="bento-content">
+                            <span class="bento-badge">Etape 4</span>
+                            <h3>Propulsez votre business</h3>
+                            <p>Bénéficiez d'un accompagnement personnalisé et de livrables de haute qualité pour faire décoller vos projet numériques.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Section Services-->
+        <section id="Services">
+            <div class="container py-5">
+                <h2>Nos domaines d'expertise</h2>
+                <div class="row g-4 justify-content-center conteneur-expertise">
+                    <div class="col-md-4">
+                        <div class="mon-expert-card">
+                            <img src="images/web.png" alt="icone-web" height="50" width="50">
+                            <h3>Developpement Web</h3>
+                            <p>Sites vitrine, applications web, e-commerce.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mon-expert-card">
+                            <img src="images/design.png" alt="icone-design" height="50" width="50">
+                            <h3>Design Graphique</h3>
+                            <p>Identité visuelle, UI/UX, illustrations.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mon-expert-card">
+                            <img src="images/marketing.webp" alt="icone-marketing" height="50" width="50">
+                            <h3>Marketing Digital</h3>
+                            <p>Reseaux sociaux, SEO, campagnes publicitaires.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Section Statistiques-->
+        <section id="statistiques">
+            <div class="container py-5">
+                <h2>AfriTalent en chiffres</h2>
+                <div class="row text-center">
+                    <div class="col-md-4"><p>1 800+ freelances</p></div>
+                    <div class="col-md-4"><p>60 Pays représentes</p></div>
+                    <div class="col-md-4"><p>4 500+ Projets réalisès</p></div>
+                </div>
+            </div>
+        </section>
+        <!--Section Témoignages-->
+        <section id="temoignages" class="py-5">
+            <div class="container">
+                <h2>Ce que disent nos Clients</h2>
+                <div id="carouselTemoignages" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                    <div class="carousel-indicators" style="margin-bottom: -2.5rem;">
+                        <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: var(--primary-color);"></button>
+                        <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: var(--primary-color);"></button>
+                        <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="2" aria-label="Slide 3" style="background-color: var(--primary-color);"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <!--Slide 1-->
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8 px-4">
+                                    <blockquote class="blockquote">
+                                        <p>AfriTalent m'a permis de trouver <br> un developpeurs compétent en moins de 48h.</p>
+                                        <div class="blockquote-footer">
+                                            <img src="images/avatar-fatoumata.jpg" alt="avatar-fatoumata" width="50" height="50">
+                                            <div>
+                                                <strong>Fatoumata Sow</strong>, 
+                                                <small class="text-muted d-block">Directrice Marketing</small>
+                                            </div>
+                                        </div>
+                                        <i class="bi bi-star-fill"></i>
+                                    </blockquote>
+                                </div>
                             </div>
-                            <a class="btn btn-outline-secondary w-100 mt-3" href="#" role="button">voir profil</a>
+                        </div>
+                        <!--Slide 2-->
+                         <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8 px-4">
+                                    <blockquote class="blockquote">
+                                        <p>AfriTalent m'a aidé à créer des templates personnalisé. je mets 10 minutes à faire mes postes maintenant,contre 1 heure avant.</p>
+                                        <div class="blockquote-footer">
+                                            <img src="images/avatar-tidiane.avif" alt="avatar-tidiane" width="50" height="50">
+                                            <div>
+                                                <strong>Tidiane Gadiaga</strong>, 
+                                                <small class="text-muted d-block">Influenceur</small>
+                                            </div>
+                                        </div>
+                                        <i class="bi bi-star-fill"></i>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Slide 3-->
+                         <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8 px-4">
+                                    <blockquote class="blockquote">
+                                        <p> Mon entreprise de mannequinat s'est reconnu <br> mondialement via ses créations de contenus exeptionnelle .</p>
+                                        <div class="blockquote-footer">
+                                            <img src="images/avatar-soukey.jpg" alt="avatar-soukey" width="50" height="50">
+                                            <div>
+                                                <strong>Soukeyna Ndiaye</strong>, 
+                                                <small class="text-muted d-block">Directrice de IMG models</small>
+                                            </div>
+                                        </div>
+                                        <i class="bi bi-star-fill"></i>
+                                    </blockquote>
+                                </div>
+                            </div>
                         </div>
                     </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 shadow-sm">
-                    <img src="images/design-graphics.webp" class="card-img-top" alt="image-design-graphics">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Aida Sy</h5>
-                        <p class="badge bg-info text-dark">Designeur graphics</p>
-                        <p class="card-text text-muted small">Création d'interfaces modernes et centrées d'utilisateurs avec 3 ans d'expérience.</p>
-                        <div d-flex justify-content-between align-items-center>
-                            <span class="fw-bold">55£/h</span>
-                            <span class="text-warning"><i class="bi bi-star-fill">4.7</i></span>
-                        </div>
-                        <a class="btn btn-outline-secondary w-100 mt-3" href="#" role="button">voir profil</a>
-                    </div>
+                    <!--Fleche directionnelles-->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                        <span class="visually-hidden">Précédent</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                        <span class="visually-hidden">Suivant</span>
+                    </button>
                 </div>
             </div>
-            <div class="col">
-                <div class="card h-100 shadow-sm">
-                    <img src="images/data-science.jpg" class="card-img-top" alt="image-data">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Cheikh Mbaaye</h5>
-                        <p class="badge bg-info text-dark">Data Scientist & IA</p>
-                        <p class="card-text text-muted small">Expert en Analyse de données et Statistique avec 7 ans d'expérience.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold">100£/h</span>
-                            <span class="text-warning"><i class="bi bi-star-fill">10.5</i></span>
-                        </div>
-                        <a class="btn btn-outline-secondary w-100 mt-3" href="#" role="button">voir profil</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <div class="col">
-                <div class="card h-100 shadow-sm">
-                    <img src="images/cybersec.jfif" class="card-img-top" alt="image-dev-cybersecurity">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Ameth Ndiaye</h5>
-                        <p class="badge bg-info text-dark">Cybersécurity</p>
-                        <p class="card-text text-muted small">Expert sur les réseaux et les données contre les attaques numériques avec seulement 5 ans d'expériences.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold">150£/h</span>
-                            <span class="text-warning"><i class="bi bi-star-fill">15.2</i></span>
-                        </div>
-                        <a class="btn btn-outline-secondary w-100 mt-3" href="#" role="button">voir profil</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 shadow-sm">
-                    <img src="images/reseau-system.avif" class="card-img-top" alt="image-Reseau-System">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Talla Diouf</h5>
-                        <p class="badge bg-info text-dark">Réseau & Systéme</p>
-                        <p class="card-text text-muted small">Il s'occupe la communication entre les ordinateurs, l'intallation des serveurs et la maintenance du parc informatique avec 8 ans d'expériences.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold">40£/h</span>
-                            <span class="text-warning"><i class="bi bi-star-fill">5.3</i></span>
-                        </div>
-                        <a class="btn btn-outline-secondary w-100 mt-3" href="#" role="button">voir profil</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 shadow-sm">
-                    <img src="images/logiciel.webp" class="card-img-top" alt="image-logiciel">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Demba Sarr</h5>
-                        <p class="badge bg-info text-dark">Génie Logiciel</p>
-                        <p class="card-text text-muted small">IL applique des méthodes rigoureuses pour concevoir, tester et maintenir des logiciels complexes et fiable sur le long terme avec 9 ans d'expériences.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold">500£/h</span>
-                            <span class="text-warning"><i class="bi bi-star-fill">7.8</i></span>
-                        </div>
-                        <a class="btn btn-outline-secondary w-100 mt-3" href="#" role="button">voir profil</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 shadow-sm">
-                    <img src="images/createur-contenu.jfif" class="card-img-top" alt="créateurs-contenus">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Nogaye Niang</h5>
-                        <p class="badge bg-info text-dark">Créateurs de Contenus</p>
-                        <p class="card-text text-muted small">Elle gére l'écriture des articles et publie ses articles sur les réseaux avec 3 ans d'expériences.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold">15£/h</span>
-                            <span class="text-warning"><i class="bi bi-star-fill">4.7</i></span>
-                        </div>
-                        <a class="btn btn-outline-secondary w-100 mt-3" href="#" role="button">voir profil</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100 shadow-sm">
-                    <img src="images/bases.avif" class="card-img-top" alt="image-bases-données">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Maimouna Gadiaga</h5>
-                        <p class="badge bg-info text-dark">Bases de Données</p>
-                        <p class="card-text text-muted small">Elle s'assure que ces infomations sont structurées et accessibles rapidement avec 8 ans d'expériences.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold">2000£/h</span>
-                            <span class="text-warning"><i class="bi bi-star-fill">20.5</i></span>
-                        </div>
-                        <a class="btn btn-outline-secondary w-100 mt-3" href="#" role="button">voir profil</a>
-                    </div>
-                </div>
-            </div>
-             <div class="col">
-                <div class="card h-100 shadow-sm">
-                    <img src="images/marketing.jpg" class="card-img-top" alt="image-marketing-digital">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Sophie Gningue</h5>
-                        <p class="badge bg-info text-dark">Marketing Digital</p>
-                        <p class="card-text text-muted small">Elle s'assure que le contenu atteint les bonnes personnes au bon moment pour générer des résultats comme ventes, abonnement... avec 5 ans d'expériences</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold">100£/h</span>
-                            <span class="text-warning"><i class="bi bi-star-fill">9.9</i></span>
-                        </div>
-                        <a class="btn btn-outline-secondary w-100 mt-3" href="#" role="button">voir profil</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-     <footer class="bg-light text-dark py-5 border-top site-footer">
+        </section>
+    </main>
+    <!--Pied de page-->
+    <footer class="bg-light text-dark py-5 border-top site-footer">
         <div class="footer-container">
             <div class="row">
                 <div class="col-md-4 mb-4 mb-md-0 text-md-center">
@@ -217,9 +226,9 @@
                 <div class="col-md-4 mb-4 mb-md-0 text-md-center">
                     <h3>Suivez-nous</h3>
                     <div class="soial-link">
-                        <a href="#"><i class="fab fa-github"></i>Github</a>
-                        <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
-                        <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+                        <a href="#" class="mx-2 text-decoration-none text-dark"><i class="bi bi-github"></i>Github</a>
+                        <a href="#" class="mx-2 text-decoration-none text-dark"><i class="bi bi-linkedin"></i>LinkedIn</a>
+                        <a href="#" class="mx-2 text-decoration-none text-dark"><i class="bi bi-twitter"></i>Twitter</a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4 mb-md-0 text-md-center footer-column">

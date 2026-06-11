@@ -149,6 +149,7 @@ a{
 #hero h1 span.text-gradient {
     background: linear-gradient(135deg, var(--primary-color), #4f46e5);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 #hero p{
@@ -417,4 +418,89 @@ a{
 .contact-iframe {
     width: 100%;
     border-radius: var(--radius-lg);
+}
+
+/* Style pour mobile*/
+@media (max-width: 767.8px) {
+    body {
+        padding-top: 80px;
+    }
+    main {
+        margin-top: 20px !important;
+    }
+    .display-4 {
+        font-size: 2.2rem !important;
+    }
+    h1 {
+        font-size: 1.8rem !important;
+    }
+    #hero h1 {
+        font-size: 2.3rem !important;
+        line-height: 1.2;
+    }
+    .hero-banner-image {
+        height: 300px;
+        transform: none !important;
+    }
+    .bento-grid {
+        grid-template-columns: 1fr !important;
+        grid-auto-rows: auto !important;
+        gap: 1rem;
+    }
+    .bento-large, .bento-tall {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+    .py-5, .about-section, .team-section, .contact-section {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+    .site-footer .row > div {
+        text-align: center !important;
+        margin-bottom: 2rem;
+    }
+    .social-link {
+        justify-content: center;
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .social-link a {
+        margin: 0;
+    }
+    .btn {
+        padding: 10px 20px;
+    }
+}
+/* Style pour Tablette*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    main {
+        margin-top: 40px !important;
+    }
+    .display-4 {
+        font-size: 3rem !important;
+    }
+    #hero h1 {
+        font-size: 3rem !important;
+    }
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-auto-rows: 220px !important;
+    }
+    .row-cols-md-3 .col{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .row-cols-md-3 {
+        justify-content: center;
+    }
+}
+/* Style pour Desktop */
+@media (min-width: 1200px) {
+    main {
+        margin-top: 50px !important;
+    }
+    .container {
+        max-width: 1140px;
+    }
 }
