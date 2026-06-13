@@ -81,8 +81,14 @@ a{
     background-color: var(--white);
     padding: 0.75rem 0;
 }
+#mainNavbar {
+    transition: all 0.3s ease;
+}
 .navbar-brand img{
     object-fit: contain;
+}
+#mainNavbar .logo, #mainNavbar .nav-link{
+    transition: all 0.3s ease;
 }
 .navbar-link{
     font-family: var(--font-body);
@@ -98,13 +104,19 @@ a{
 /*Pied de page*/
 .site-footer{
     background-color: #0b0f19 !important;
-    color: #94a3b8 !important;
+    color: white !important;
     margin-top: var(--space-lg);
     border-top: 1px solid #1e293b;
     padding: var(--space-lg) 0 var(--space-sm) 0;
 }
-.site-footer h3, .site-footer h5 {
+.site-footer i{
+    color: aqua !important;
+}
+.site-footer h5, .site-footer p {
     color: var(--white) !important;
+}
+.site-footer .text-muted{
+    color: #94a3b8 !important;
 }
 .footer-container{
     max-width: 1200px;
@@ -255,10 +267,7 @@ a{
 }
 #Services .conteneur-expertise {
     background-color: #f8f9fa;
-    display: flex !important;
-    justify-content: center !important;
     gap: 30px !important;
-    flex-wrap: wrap !important;
     padding: 20px !important;
 }
 #Services .mon-expert-card{
@@ -275,8 +284,8 @@ a{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 #Services .mon-expert-card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.08) !important;
+    transform: translateY(-10px) scale(1.03) !important;
+    box-shadow: 0 25px 50px rgba(99, 102, 241, 0.15) !important;
 }
 #Services img{
     margin-bottom: var(--space-sm);
@@ -294,26 +303,25 @@ a{
 }
 /* Section statistique*/
 #statistiques{
-    background-color: var(--text-muted);
-    color: white;
+    background-color: white;
+    color: #121212;
 }
-#statistiques h2{
-    color: white;
+#statistiques .stats-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
-#statistiques .col-md-4 p{
-    display: flex !important;
-    justify-content: space-around;
-    align-items: center;
-    padding: 30px 20px !important;
-    border: 1px solid white;
-    background-color: var(--white);
-    border-radius: 50px;
+#statistiques .chiffres{
+    background-color: #f1f5f9 !important;
+    color: #121212 !important;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 40px;
     text-align: center;
     font-family: var(--font-title);
     font-size: 2rem;
     font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 0;
+    box-shadow: #f5f3ff;
 }
 /*Temoignages*/
 #temoignages .blockquote{
@@ -368,7 +376,8 @@ a{
     margin-top: 50px;
 }
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px) !important;
+    box-shadow: 0 25px 50px rgba(99, 102, 241, 0.15) !important;
 }
 .freelances .card-img-top {
     height: 350px;
@@ -495,6 +504,11 @@ a{
         justify-content: center;
     }
 }
+@media (max-width: 768px){
+    #statistiques .stats-grid{
+        grid-template-columns:1fr !important;
+    }
+}
 /* Style pour Desktop */
 @media (min-width: 1200px) {
     main {
@@ -503,4 +517,158 @@ a{
     .container {
         max-width: 1140px;
     }
+}
+
+/* Dark mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+.dark-mode .logo {
+    background-color:#121212 !important;
+}
+.dark-mode .navbar {
+    background-color: #1e1e1e !important;
+}
+.dark-mode .navbar-link, .dark-mode .navbar-brand {
+    color: white !important;
+}
+.dark-mode section, .dark-mode footer{
+    background-color: #1e1e1e !important;
+    color: white !important;
+}
+.dark-mode #hero {
+    background-color: #121212 !important;
+    color: white !important;
+}
+.dark-mode #Services, .dark-mode #Services .conteneur-expertise {
+    background-color: #121212 !important;
+    color: white !important;
+}
+.dark-mode #Services .mon-expert-card, .dark-mode #Services p{
+    background-color: #6366f1 !important;
+    color: white !important;
+}
+.dark-mode #statistiques {
+    background-color: #121212 !important;
+    color: white !important
+}
+.dark-mode #statistiques .chiffres {
+   background-color: #1e293b !important;
+   color: white !important;
+   border-color: white !important;
+}
+.dark-mode .blockquote {
+    background-color: #1e293b !important;
+    color: white !important;
+}
+.dark-mode .blockquote p, .dark-mode .blockquote .blockquote-footer .d-block {
+    color: white !important;
+}
+.navbar {
+    transition: all 0.3s ease !important;
+}
+.navbar-scrolled {
+    background-color: white !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.dark-mode .text-dark {
+    color: white !important;
+}
+.dark-mode .mon-expert-card, .dark-mode .bento-item {
+    background-color: #222;
+    color: white;
+}
+/* Dark mode page 2 */
+.dark-mode .freelances .container h1{
+    color: #64748b !important;
+}
+.dark-mode .freelances .container p{
+    color: white !important;
+}
+.dark-mode select, .dark-mode .from-floating label{
+    background-color: #64748b !important;
+    color: white !important;
+}
+.dark-mode .freelances .card{
+    background-color: #222 !important;
+    color: white !important;
+}
+/* Dark mode page 3 */
+.dark-mode .tarifs .card {
+    background-color: #0b0f19 !important;
+    color: #ddd !important;
+}
+.dark-mode .accordion .accordion-item{
+    background-color: #64748b !important;
+    color: #1e293b !important;
+}
+.dark-mode .accordion .accordion-item button{
+    background-color: black !important;
+    color: white !important;
+}
+/* Dark mode page 4 */
+.dark-mode .about-section p, .dark-mode .about-section .lead{
+    color: #f1f5f9 !important;
+}
+.dark-mode .mission .lead{
+   color: #f1f5f9 !important; 
+}
+.dark-mode .team-section .card{
+    background-color: #222 !important;
+    color: #94a3b8 !important;
+}
+/* Dark mode page 5 */
+.dark-mode .contact-text .lead{
+    color: #94a3b8 !important;
+}
+.dark-mode .contact-section .contact-form{
+    background-color: #1e293b !important;
+    color: #e2e8f0 !important;
+}
+.dark-mode input, .dark-mode textarea{
+    background-color: #64748b !important;
+    color: white !important;
+}
+.dark-mode .coordonne .contact-info {
+    background-color: #222 !important;
+    color: white !important;
+}
+.dark-mode #theme-toggle-mobile i {
+    color: white !important;
+}
+/* dark mode en navbar scroll */
+.dark-mode .navbar-scrolled {
+    background-color: rgba(33, 37, 41, 0.95) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35) !important;
+}
+.dark-mode #navMenu {
+    background-color: #ddd !important;
+}
+/* Boutton retour en haut */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 9999;
+}
+/* Scrolle */
+.navbar-scrolled{
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+    /* effet shrink */
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.navbar-scrolled .logo {
+    transform: scale(0.9);
+}
+.navbar-scrolled .nav-link{
+    font-size: 0.95rem;
+    font-weight: 600;
 }
