@@ -45,3 +45,42 @@ backToTop.addEventListener("click", () => {
 });
 
 console.log("JavaScript chargé !");
+//IntersectionObserver
+const counters = document.querySelectorAll(".counter");
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            const counter = entry.target;
+            const target = parseInt(counter.dataset.target);
+            let count = 0;
+            const increment = target /100;
+            const updatecounter = () => {
+                count += increment;
+                if(count < target){
+                    counter.textContent = Math.ceil(count);
+                    requestAnimationFrame(updatecounter);
+                }
+                else{
+                    counter.textContent = target.toLocaleString();
+                }
+            };
+            updatecounter();
+            observer.unobserve(counter);
+        }
+    });
+});
+counters.forEach(counter => {
+    observer.observe(counter);
+});
+// fade-in
+const sections = document.querySelectorAll(".fade-section");
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+});
+sections.forEach(section => {
+    sectionObserver.observe(section);
+});
