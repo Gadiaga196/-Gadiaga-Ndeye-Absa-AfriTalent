@@ -6,14 +6,14 @@
     <title>AfriTalent — contact</title>
     <!-- Bootstrap 5 via CDN : feuille de style -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- Votre feuille de style personnelle -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Le contenu de la page sera ajoute ici -->
     <!-- Bootstrap 5 via CDN : script JavaScript -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm fixed-top" id="mainNavbar">
+    <!--Navbar principale-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm fixed-top" id="mainNavbar">
         <div class="container flex-nowrap">
             <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo-AfriTalent" height="50" width="150" class="d-inline-block align-text-top" ></a>
             <button id="theme-toggle-mobile" class="btn btn-link text-dark p-2 d-inline-flex d-lg-none">
@@ -46,7 +46,7 @@
             </div>
         </div>
     </nav>
-
+    <!--Section contact-->
     <section class="contact-text container text-center justify-content-center my-5">
         <h1 class="display-4 fw-bold">Contactez-nous</h1>
         <p class="lead text-muted">
@@ -55,8 +55,9 @@
         </p>
     </section>
     <section class="contact-section container my-5">
+        <!--Formulaires-->
         <form id="contactForm" class="contact-form shadow-lg p-4 rounded bg-white">
-            <h3 class="text-center">Veillez remplir tous les champs du formulaire</h3>
+            <h2 class="text-center">Veillez remplir tous les champs du formulaire</h2>
             <div class="row  mb-3">
                 <div class="form-floating col-md-4">
                    <input type="text" id="prenom" class="form-control" placeholder="example">
@@ -84,7 +85,7 @@
                         <option value="4">Partenariat</option>
                         <option value="5">Question</option>
                     </select>
-                    <label for="floatingSelect">menu déroulant</label>
+                    <label for="sujet">menu déroulant</label>
                 </div>
             </div>
             <div class="row  mb-3">
@@ -109,7 +110,7 @@
             <div id="successMessage" class="alert alert-success d-none">
                 Votre message a été envoyé avec succés !
             </div>
-            <div class="row text-center">
+            <div class="row gap-3 text-center">
                 <div class="btn btn-center col-md-1">
                     <button type="submit" class="btn btn-success text-light p-2">Valider</button>
                 </div>
@@ -119,28 +120,29 @@
             </div>
             <div class="coordonne row mt-5">
                 <div class="contact-info col-md-6">
-                    <h4>Nos coordonnées</h4>
+                    <h2>Nos coordonnées</h2>
                     <p><i class="bi bi-enveloppe"></i><a href="#">contact@freelance.sn</a></p>
                     <p><i class="bi bi-telephone"></i><a href="#">+221 77 859 56 45</a></p>
                     <p><i class="bi bi-geo-alt"></i>Dakar, Sénégal</p>
                 </div>
                 <div class=" contact-iframe col-md-6">
-                    <h4>Localisation</h4>
+                    <h2>Localisation</h2>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.386340572122!2d-17.46178432512537!3d14.690730885806387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1728c69aefd29%3A0x46cd0049042f3acb!2sAv.%20Cheikh%20Anta%20Diop%2C%20Dakar!5e0!3m2!1sfr!2ssn!4v1775905211765!5m2!1sfr!2ssn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </form>
     </section>
+    <!--Pied de page-->
     <footer class="bg-light text-dark py-5 border-top site-footer">
         <div class="footer-container">
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-4 mb-md-0 text-md-center">
-                    <h5 class="fw-bold">AfriTalent</h5>
+                    <h3 class="fw-bold">AfriTalent</h3>
                     <p class="text-muted small">
                         plateforme mettant en relation les entrprises et les meilleurs talents africains.</p><br>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-md-0 text-md-center">
-                    <h5 class="fw-bold">Services</h5>
+                    <h3 class="fw-bold">Services</h3>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-decoration-none text-muted">Développement Web</a></li>
                         <li><a href="#" class="text-decoration-none text-muted">Design UI/UX</a></li>
@@ -149,7 +151,7 @@
                     </ul>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-md-0 text-md-center footer-column">
-                    <h5 class="fw-bold">Navigation</h5>
+                    <h3 class="fw-bold">Navigation</h3>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-decoration-none text-muted">Accueil</a></li>
                         <li><a href="#" class="text-decoration-none text-muted">Freelances</a></li>
@@ -158,7 +160,7 @@
                     </ul>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-md-0 text-md-center">
-                    <h5 class="fw-bold">Contact</h5>
+                    <h3 class="fw-bold">Contact</h3>
                     <p class="text-muted small mb-2">
                         <i class="bi bi-enveloppe-fill"></i>contact@afritalent.com
                     </p>
