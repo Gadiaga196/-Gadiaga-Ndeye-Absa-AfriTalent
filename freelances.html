@@ -64,16 +64,16 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="form-floating shadow-sm">
                             <select class="form-select" id="floatingSelectGrid">
-                                <option selected>Toutes les catégories</option>
-                                <option value="1">Développement Web</option>
-                                <option value="2">Designs Graphics</option>
-                                <option value="3">Data Science & IA</option>
-                                <option value="4">Cybersécurity</option>
-                                <option value="5">Réseau & Système</option>
-                                <option value="6">Génie Logiciel</option>
-                                <option value="7">Créateurs de contenus</option>
-                                <option value="8">Bases de Données</option>
-                                <option value="9">Marketing Digital</option>
+                                <option value="all" selected>Toutes les catégories</option>
+                                <option value="dev">Développement Web</option>
+                                <option value="design">Designs Graphics</option>
+                                <option value="data">Data Science & IA</option>
+                                <option value="cyber">Cybersécurity</option>
+                                <option value="reseau">Réseau & Système</option>
+                                <option value="genie">Génie Logiciel</option>
+                                <option value="creat">Créateurs de contenus</option>
+                                <option value="bases">Bases de Données</option>
+                                <option value="marke">Marketing Digital</option>
                             </select>
                             <label for="floatingSelectGrid">Choisissez une catégorie</label>
                         </div>
@@ -84,7 +84,7 @@
             <div class="container">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                     
-                    <div class="col">
+                    <div class="col freelance-card" data-category="dev">
                         <div class="card h-100 shadow-sm">
                             <img src="images/web.webp" class="card-img-top" alt="image-dev-web" style="height: 200px; object-fit: cover;">
                             <div class="card-body text-center d-flex flex-column justify-content-between">
@@ -104,7 +104,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col freelance-card" data-category="design">
                         <div class="card h-100 shadow-sm">
                             <img src="images/design-graphics.webp" class="card-img-top" alt="image-design-graphics" style="height: 200px; object-fit: cover;">
                             <div class="card-body text-center d-flex flex-column justify-content-between">
@@ -124,7 +124,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col freelance-card" data-category="data">
                         <div class="card h-100 shadow-sm">
                             <img src="images/data-science.jpg" class="card-img-top" alt="image-data" style="height: 200px; object-fit: cover;">
                             <div class="card-body text-center d-flex flex-column justify-content-between">
@@ -144,7 +144,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col freelance-card" data-category="cyber">
                         <div class="card h-100 shadow-sm">
                             <img src="images/cybersec.jfif" class="card-img-top" alt="image-dev-cybersecurity" style="height: 200px; object-fit: cover;">
                             <div class="card-body text-center d-flex flex-column justify-content-between">
@@ -164,7 +164,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col freelance-card" data-category="reseau">
                         <div class="card h-100 shadow-sm">
                             <img src="images/reseau-system.avif" class="card-img-top" alt="image-Reseau-System" style="height: 200px; object-fit: cover;">
                             <div class="card-body text-center d-flex flex-column justify-content-between">
@@ -184,7 +184,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col freelance-card" data-category="genie">
                         <div class="card h-100 shadow-sm">
                             <img src="images/logiciel.webp" class="card-img-top" alt="image-logiciel" style="height: 200px; object-fit: cover;">
                             <div class="card-body text-center d-flex flex-column justify-content-between">
@@ -204,7 +204,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col freelance-card" data-category="creat">
                         <div class="card h-100 shadow-sm">
                             <img src="images/createur-contenu.jfif" class="card-img-top" alt="créateurs-contenus" style="height: 200px; object-fit: cover;">
                             <div class="card-body text-center d-flex flex-column justify-content-between">
@@ -224,7 +224,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col freelance-card" data-category="bases">
                         <div class="card h-100 shadow-sm">
                             <img src="images/bases.avif" class="card-img-top" alt="image-bases-données" style="height: 200px; object-fit: cover;">
                             <div class="card-body text-center d-flex flex-column justify-content-between">
@@ -244,7 +244,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col freelance-card" data-category="marke">
                         <div class="card h-100 shadow-sm">
                             <img src="images/marketing.jpg" class="card-img-top" alt="image-marketing-digital" style="height: 200px; object-fit: cover;">
                             <div class="card-body text-center d-flex flex-column justify-content-between">
@@ -318,7 +318,7 @@
     </footer>
     <button id="backToTop" class="btn btn-primary">
         <i class="bi bi-arrow-up"></i>
-    </button
+    </button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Votre script JavaScript -->
     <script src="js/main.js"></script>
